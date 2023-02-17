@@ -1,0 +1,33 @@
+<head>
+  <meta charset="utf-8">
+  {{#redirect_url}}
+    <meta http-equiv="refresh" content="0;URL='{{redirect_url}}'">
+  {{/redirect_url}}
+
+  {{^redirect_url}}
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>{{#title}}{{title}}{{/title}}{{^title}}{{>partials/title}}{{/title}} {{#_appTitle}}| {{_appTitle}} {{/_appTitle}}</title>
+  <meta name="viewport" content="width=device-width">
+  <meta name="title" content="{{#title}}{{title}}{{/title}}{{^title}}{{>partials/title}}{{/title}} {{#_appTitle}}| {{_appTitle}} {{/_appTitle}}">
+  {{#_description}}<meta name="description" content="{{_description}}">{{/_description}}
+  <link rel="shortcut icon" href="{{_rel}}{{{_appFaviconPath}}}{{^_appFaviconPath}}favicon.ico{{/_appFaviconPath}}">
+
+  {{! We don't use a system font for code segments because we want those to have a similar width in multiple platforms.
+      We choose Inconsolata because it looks nice enough in multiple systems and browsers. }}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400..700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" integrity="sha384-EvBWSlnoFgZlXJvpzS+MAUEjvN7+gcCwH+qh7GRFOGgZO0PuwOFro7qPOJnLfe7l" crossorigin="anonymous">
+  <link id="light-code-style" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/xcode.min.css">
+  <link id="dark-code-style" rel="stylesheet" href="{{_rel}}styles/dark-code.css">
+  <link rel="stylesheet" href="{{_rel}}styles/config.css">
+  <link rel="stylesheet" href="{{_rel}}styles/concisefx.css">
+  <link rel="stylesheet" href="{{_rel}}styles/main.css">
+  <meta property="docfx:navrel" content="{{_navRel}}">
+  <meta property="docfx:tocrel" content="{{_tocRel}}">
+  {{#_noindex}}<meta name="searchOption" content="noindex">{{/_noindex}}
+  {{#_enableSearch}}<meta property="docfx:rel" content="{{_rel}}">{{/_enableSearch}}
+  {{#_enableNewTab}}<meta property="docfx:newtab" content="true">{{/_enableNewTab}}
+  {{/redirect_url}}
+</head>

@@ -1,0 +1,62 @@
+{{!Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license. See LICENSE file in the project root for full license information.}}
+{{!include(/^styles/.*/)}}
+{{!include(/^fonts/.*/)}}
+{{!include(favicon.ico)}}
+{{!include(logo.svg)}}
+{{!include(search-stopwords.json)}}
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+    {{>partials/head}}
+
+    <body data-spy="scroll" data-target="#affix" data-offset="120">
+        <header class="top-navbar">
+            <button id="menu-button" title="Navigation Menu" onclick="toggleMenu()">
+                <span class="burger-icon"></span>
+            </button>
+            {{>partials/logo}}
+        </header>
+
+        <div class="body-content">
+            <div id="blackout" class="blackout" onclick="toggleMenu()"></div>
+
+            <nav id="sidebar" role="navigation">
+                <div class="sidebar">
+                    {{>partials/navbar}}
+                    <div class="sidebar-item-separator"></div>
+                    {{^_disableToc}}
+                        {{>partials/toc}}
+                    {{/_disableToc}}
+                </div>
+                {{>partials/footer}}
+            </nav>
+
+            <main class="main-panel">
+                {{#_enableSearch}}
+                {{>partials/searchResults}}
+                {{/_enableSearch}}
+
+                <div role="main" class="hide-when-search article">
+                    {{^_disableBreadcrumb}}
+                        {{>partials/breadcrumb}}
+                    {{/_disableBreadcrumb}}
+
+                    <article class="content wrap" id="_content" data-uid="{{uid}}">
+                      {{!body}}
+                    </article>
+                    {{^_disableAffix}}
+                    {{>partials/affix}}
+                    {{/_disableAffix}}
+                </div>
+
+                {{#_copyrightFooter}}
+                <div class="copyright-footer">
+                    <span>{{_copyrightFooter}}</span>
+                </div>
+                {{/_copyrightFooter}}
+            </main>
+        </div>
+
+        {{>partials/scripts}}
+    </body>
+</html>

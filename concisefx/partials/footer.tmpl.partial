@@ -1,0 +1,30 @@
+<div class="footer">
+  <div class="theme-select">
+    <button class="themes-menu-toggle">
+      <i class="bi bi-circle-half theme-icon"></i>
+      Theme
+    </button>
+
+    <ul class="themes-menu">
+      <li>
+        <button class="dark-theme-option">
+          <i class="bi bi-moon-fill"></i> Dark
+        </button>
+      </li>
+      <li>
+        <button class="light-theme-option">
+          <i class="bi bi-sun-fill"></i> Light
+        </button>
+      </li>
+      <li>
+        <button class="auto-theme-option">
+          <i class="bi bi-circle-half"></i> Auto
+        </button>
+      </li>
+    </ul>
+  </div>
+
+{{#_appFooter}}
+  {{{_appFooter}}}
+{{/_appFooter}}
+</div>
