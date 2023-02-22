@@ -923,7 +923,7 @@ ul.breadcrumb {
     height: 2.7em;
 
     position: absolute;
-    top: 117px;
+    top: 115px;
     padding-left: 3px;
     /* Same as sideaffix container. */
     left: calc(100vw - var(--min-affix-width));
