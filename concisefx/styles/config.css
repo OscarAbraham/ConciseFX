@@ -119,8 +119,8 @@
 
     --main-bg-color: #fff;
     --text-color: #1f1f1f;
-    --link-color: #0050f0;
-    --link-hover-color: #0050f0;
+    --link-color: #005aea;
+    --link-hover-color: #005aea;
     --separator-color: #c9d0db;
 
     /* Header */
@@ -134,14 +134,14 @@
 
     /* Affix */
     --affix-color: #6f6f6f;
-    --affix-active-color: #0202f2;
+    --affix-active-color: #005aea;
     --affix-separator-color: transparent;
 
     /* Sidebar */
     --sidebar-bg-color: var(--panel-bg-color);
     --sidebar-border-color: var(--panel-border-color);
     --sidebar-item-color: #202020;
-    --sidebar-active-item-color: #1f1fd0;
+    --sidebar-active-item-color: #003fd0;
 
     /* Search */
     --search-color: #1f1f1f;
