@@ -1177,7 +1177,6 @@ blockquote {
 
 blockquote > p {
     margin: 0.375em 0 0.4375em;
-    font-style: italic;
 }
 
 /* Footers */
