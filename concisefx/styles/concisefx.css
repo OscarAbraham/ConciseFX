@@ -767,7 +767,7 @@ ul.breadcrumb {
     /* Fixed position elements render their text better with a solid background. */
     background-color: var(--main-bg-color);
     position: fixed;
-    top: 174px;
+    top: 168px;
 
     /* In case min isn't supported. */
     left: calc(100vw - var(--min-affix-width));
@@ -806,7 +806,7 @@ ul.breadcrumb {
 
     .affix ul.bs-docs-sidenav.level1 > li {
         border-left: solid 1px transparent;
-        margin-left: -1px;
+        margin: 13px -1px;
         padding-left: 11px;
     }
     .affix ul.bs-docs-sidenav.level1 > li.active {
@@ -814,7 +814,7 @@ ul.breadcrumb {
     }
 
 .affix ul.bs-docs-sidenav li {
-    margin: 14px 0;
+    margin: 12px 0;
 }
 
 .affix ul > li > ul {

@@ -22,7 +22,7 @@
 @media (max-width: 1460px) {
     :root {
         --sidebar-width: 24vw;
-        --min-affix-width: 170px;
+        --min-affix-width: 181px;
     }
 }
 
